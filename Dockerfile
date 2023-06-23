@@ -2,5 +2,5 @@ FROM tomcat:latest
 RUN mkdir /app
 WORKDIR /app
 COPY /target/maven-web-application-0.0.1-SNAPSHOT.* maven-web-app.war
-EXPOSE 8082
+EXPOSE 8080
 
