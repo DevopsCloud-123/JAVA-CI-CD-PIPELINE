@@ -18,7 +18,7 @@ pipeline {
       stage('Docker-Build') {
           steps {
                sh 'docker build --tag maven-web-app1 .'
-               sh 'docker run -d -it -p 8082:8082 maven-web-app1'
+               sh 'docker run -d -it -p 8082:8080 maven-web-app1'
           }
        }
 }
