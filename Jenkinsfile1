@@ -1,0 +1,14 @@
+pipeline {
+ tools {
+   maven 'Maven'
+ } 
+  agent any
+   stages {
+        stage('gitclone') { 
+            steps {
+                git branch: 'main', url: 'https://github.com/DevopsCloud-123/JAVA-CI-CD-PIPELINE.git'
+                
+            }
+        }
+}
+}
