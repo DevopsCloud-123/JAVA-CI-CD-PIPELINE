@@ -15,5 +15,11 @@ pipeline {
                sh 'mvn clean install'
           }
        }
+      stage('Docker-Build') {
+          steps {
+               sh 'docker build --tag maven-web-app .'
+               sh 'docker build -d -t -p 8080:8080 maven-web-app/maven-web-app-${BUILD_NUMBER}'
+          }
+       }
 }
 }
